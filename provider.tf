@@ -5,7 +5,7 @@
 
 variable "gcp_project" {
   # Configurar el nombre del proyecto en GCP
-  default = "cnsa-2021"
+  default = "cnsa2021-fga432"
 }
 
 terraform {
@@ -20,4 +20,5 @@ provider "google" {
   project = var.gcp_project
   region  = "us-central1"
   zone    = "us-central1-c"
+  credentials = file("./credentials/fga432.json")
 }
